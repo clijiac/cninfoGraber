@@ -73,12 +73,19 @@ function getdata()
 
     $.blockUI({ 
             theme:     true, 
+            draggable: true,     
             title:    '10秒之内复制', 
             message:  '<textarea rows="1" style="width: 500px;height = 20px" >'+resultString1+'</textarea>', 
             timeout:   10000 
         }); 
 
-
+    	$('textarea').click(function(){
+			if($.browser.msie) this.createTextRange().select();
+			else {
+				this.selectionStart = 0;
+				this.selectionEnd = this.value.length;
+			}
+		})
 		return false;
  }
 
@@ -107,13 +114,7 @@ function span1()
 	    icon.style.background = "-moz-linear-gradient(top, #FFCC00, #FF9900)";
 	    icon.style.border = "1px solid #EE8800";	    
 		navbar.parentNode.insertBefore(icon, navbar.nextSibling);
-		$('textarea').click(function(){
-			if($.browser.msie) this.createTextRange().select();
-			else {
-				this.selectionStart = 0;
-				this.selectionEnd = this.value.length;
-			}
-		})
+	
 		span1();
 	}
 	
