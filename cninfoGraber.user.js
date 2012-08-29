@@ -89,7 +89,7 @@ function span1()
 	var navbar, newElement;
 	
 	navbar = document.getElementById('cwzbform');
-	if (navbar) {
+	if (navbar!=null) {
 		var icon = document.createElement('span');
 	    icon.title = "description";
 	    icon.id = "SpanGetData";
@@ -99,8 +99,9 @@ function span1()
 	    icon.style.border = "1px solid #EE8800";
 	    
 		navbar.parentNode.insertBefore(icon, navbar.nextSibling);
+		span1();
 	}
-	span1();
+	
 
 
 
