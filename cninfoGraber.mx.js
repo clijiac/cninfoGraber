@@ -72,7 +72,7 @@ function getdata()
 	alert(resultString1);
 
     $('div.zx_left').block({ 
-                message: resultString1, 
+                message: '<p>'+resultString1+'</p>', 
                 css: { border: '3px solid #a00' } 
             }); 
 
