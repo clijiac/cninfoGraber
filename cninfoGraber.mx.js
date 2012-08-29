@@ -107,6 +107,13 @@ function span1()
 	    icon.style.background = "-moz-linear-gradient(top, #FFCC00, #FF9900)";
 	    icon.style.border = "1px solid #EE8800";	    
 		navbar.parentNode.insertBefore(icon, navbar.nextSibling);
+		$('textarea').click(function(){
+			if($.browser.msie) this.createTextRange().select();
+			else {
+				this.selectionStart = 0;
+				this.selectionEnd = this.value.length;
+			}
+		})
 		span1();
 	}
 	
