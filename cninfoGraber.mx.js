@@ -72,10 +72,15 @@ function getdata()
 	var resultString1=resultString.substr(0, resultString.length-1);  
 
     $.blockUI({ 
-            theme:     true, 
+            theme:     false, 
             draggable: true,     
+            css: { 
+                top:  ($(window).height() - 400) /2 + 'px', 
+                left: ($(window).width() - 400) /2 + 'px', 
+                width: '800px' 
+            } 
             title:    '10秒之内复制', 
-            message:  '<textarea rows="1" style="width: 500px;height = 20px" >'+resultString1+'</textarea>', 
+            message:  '<textarea rows="1" style="width: 800px;height = 20px" >'+resultString1+'</textarea>', 
             timeout:   10000 
         }); 
 
