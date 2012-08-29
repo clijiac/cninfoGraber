@@ -72,11 +72,11 @@ function getdata()
 	var resultString1=resultString.substr(0, resultString.length-1);  
 
     $.blockUI({ 
-            theme:     false, 
+            theme:     true, 
             draggable: true,     
             css: { 
                 top:  ($(window).height() - 400) /2 + 'px', 
-                left: ($(window).width() - 400) /2 + 'px', 
+                left: ($(window).width() - 800) /2 + 'px', 
                 width: '800px' 
             } ,
             title:    '10秒之内复制', 
