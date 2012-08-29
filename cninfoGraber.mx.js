@@ -70,11 +70,10 @@ function getdata()
 		};
 	}
 	var resultString1=resultString.substr(0, resultString.length-1);  
-	alert(resultString1);
 
     $.blockUI({ 
             theme:     true, 
-            title:    'This is your title', 
+            title:    '10秒之内复制', 
             message:  '<textarea rows="1" style="width: 500px;height = 20px" >'+resultString1+'</textarea>', 
             timeout:   10000 
         }); 
