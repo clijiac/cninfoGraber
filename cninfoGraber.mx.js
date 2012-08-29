@@ -72,10 +72,12 @@ function getdata()
 	var resultString1=resultString.substr(0, resultString.length-1);  
 	alert(resultString1);
 
-    $('div.zx_left').block({ 
-                message: '<textarea>'+resultString1+'</textarea>', 
-                css: { border: '3px solid #a00' } 
-            }); 
+    $.blockUI({ 
+            theme:     true, 
+            title:    'This is your title', 
+            message:  '<textarea>'+resultString1+'</textarea>', 
+            timeout:   2000 
+        }); 
 
 
 		return false;
