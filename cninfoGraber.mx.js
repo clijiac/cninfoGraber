@@ -56,7 +56,7 @@ function getdata()
 			};		
 		};		
 	}
-
+	resultString += resultString +"	";
 	for(var i3=2;i3 <resultArray.length;i3++)
 	{
 		i3++;
