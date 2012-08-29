@@ -88,7 +88,7 @@ function span1()
  
 	var navbar, newElement;
 	
-	navbar = document.getElementById('cwzbform');
+	navbar = document.getElementById("i_nr").contentWindow.document.getElementById('cwzbform');
 	if (navbar) {
 		var icon = document.createElement('span');
 	    icon.title = "description";
