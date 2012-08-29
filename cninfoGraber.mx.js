@@ -70,14 +70,13 @@ function getdata()
 	}
 	var resultString1=resultString.substr(0, resultString.length-1);  
 	alert(resultString1);
-	easyDialog.open({
-	  container : {
-	    header : '弹出层标题',
-	    content : resultString1,
-	    yesFn : true,
-	    noFn : true
-	  }
-	});
+
+    $('div.zx_left').block({ 
+                message: '<h1>'+resultString1+'</h1>', 
+                css: { border: '3px solid #a00' } 
+            }); 
+
+
 		return false;
  }
 
@@ -104,8 +103,7 @@ function span1()
 	    icon.innerHTML = '获取数据';
 	    icon.style.background = "#FFCC00";
 	    icon.style.background = "-moz-linear-gradient(top, #FFCC00, #FF9900)";
-	    icon.style.border = "1px solid #EE8800";
-	    
+	    icon.style.border = "1px solid #EE8800";	    
 		navbar.parentNode.insertBefore(icon, navbar.nextSibling);
 		span1();
 	}
