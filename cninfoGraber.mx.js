@@ -9,7 +9,7 @@
 
 function getdata()
 {
-	//var i_nr = document.getElementById("i_nr").contentWindow.document;
+	
 	var dd = document.getElementsByClassName("clear");
 	var targetTable,trows,tcells;
 	var resultArray=new Array()
@@ -79,7 +79,7 @@ function span1()
 	var res=["SpanGetData"], obj; //需要处理的span id
 	for(var j=0; j<res.length; j++)
 	{
-		  obj = document.getElementById(res[j]);
+		  obj = i_nr.getElementById(res[j]);
 		  obj.title=obj.id;
           obj.j = j;
           obj.onclick= function(){getdata();};
@@ -87,8 +87,8 @@ function span1()
 }
  
 	var navbar, newElement;
-	
-	navbar = document.getElementById("i_nr").contentWindow.document.getElementById('cwzbform');
+	var i_nr = document.getElementById("i_nr").contentWindow.document;
+	navbar = i_nr.getElementById('cwzbform');
 	if (navbar) {
 		var icon = document.createElement('span');
 	    icon.title = "description";
