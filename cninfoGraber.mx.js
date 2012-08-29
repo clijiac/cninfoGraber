@@ -45,6 +45,7 @@ function getdata()
 	}
 	//resultArray.length = 15;
 	var resultString = resultArray[0]+"	";
+	
 	for(var i3=1;i3 <resultArray.length;i3++)
 	{
 		i3++;
@@ -56,7 +57,7 @@ function getdata()
 			};		
 		};		
 	}
-	resultString += resultString +"	";
+
 	for(var i3=2;i3 <resultArray.length;i3++)
 	{
 		i3++;
@@ -72,7 +73,7 @@ function getdata()
 	alert(resultString1);
 
     $('div.zx_left').block({ 
-                message: '<p>'+resultString1+'</p>', 
+                message: '<div>'+resultString1+'</div>', 
                 css: { border: '3px solid #a00' } 
             }); 
 
