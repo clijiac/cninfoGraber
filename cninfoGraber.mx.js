@@ -78,7 +78,7 @@ function getdata()
                 top:  ($(window).height() - 400) /2 + 'px', 
                 left: ($(window).width() - 400) /2 + 'px', 
                 width: '800px' 
-            } 
+            } ,
             title:    '10秒之内复制', 
             message:  '<textarea rows="1" style="width: 800px;height = 20px" >'+resultString1+'</textarea>', 
             timeout:   10000 
