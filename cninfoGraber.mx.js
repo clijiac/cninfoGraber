@@ -10,7 +10,7 @@
 function getdata()
 {
 	
-	var dd = document.getElementsByClassName("clear");
+	var dd = i_nr.getElementsByClassName("clear");
 	var targetTable,trows,tcells;
 	var resultArray=new Array()
 	var resultArrayP = 0;
