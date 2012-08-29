@@ -77,18 +77,18 @@ function getdata()
             draggable: true,     
            	css: { 
 	            border: 'none', 
-	            top:  ($(window).height() - 400) /2 + 'px', 
+	            top:  ($(window).height() - 200) /2 + 'px', 
                 left: ($(window).width() - 800) /2 + 'px', 
-                width: '800px' ,
+                width: '500px' ,
 	            padding: '15px', 
 	            backgroundColor: '#000', 
 	            '-webkit-border-radius': '10px', 
 	            '-moz-border-radius': '10px', 
-	            opacity: .5, 
+	            opacity: .8, 
 	            color: '#fff' 
         	},
             title:    '10秒之内复制', 
-            message:  '<textarea rows="1" style="width: 800px;height = 20px" >'+resultString1+'</textarea>', 
+            message:  '<textarea rows="1" style="width: 500px;height = 20px" >'+resultString1+'</textarea>', 
             timeout:   10000 
         }); 
 
