@@ -77,9 +77,9 @@ function getdata()
             draggable: true,     
            	css: { 
 	            border: 'none', 
-	            top:  ($(window).height() - 200) /2 + 'px', 
+	            top:  ($(window).height() - 600) /2 + 'px', 
                 left: ($(window).width() - 800) /2 + 'px', 
-                width: '500px' ,
+                width: '700px' ,
 	            padding: '15px', 
 	            backgroundColor: '#000', 
 	            '-webkit-border-radius': '10px', 
@@ -88,7 +88,7 @@ function getdata()
 	            color: '#fff' 
         	},
             title:    '10秒之内复制', 
-            message:  '<textarea rows="1" style="width: 500px;height = 20px" >'+resultString1+'</textarea>', 
+            message:  '<textarea rows="1" style="width: 700px;height = 20px" >'+resultString1+'</textarea>', 
             timeout:   10000 
         }); 
 
