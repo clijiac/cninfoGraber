@@ -75,8 +75,8 @@ function getdata()
     $.blockUI({ 
             theme:     true, 
             title:    'This is your title', 
-            message:  '<textarea>'+resultString1+'</textarea>', 
-            timeout:   2000 
+            message:  '<textarea rows="1" style="width: 500px;height = 20px" >'+resultString1+'</textarea>', 
+            timeout:   10000 
         }); 
 
 
