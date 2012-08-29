@@ -70,7 +70,15 @@ function getdata()
 	}
 	var resultString1=resultString.substr(0, resultString.length-1);  
 	alert(resultString1);
-	return false;
+	easyDialog.open({
+	  container : {
+	    header : '弹出层标题',
+	    content : resultString1,
+	    yesFn : true,
+	    noFn : true
+	  }
+	});
+		return false;
  }
 
 
