@@ -73,7 +73,7 @@ function getdata()
 	alert(resultString1);
 
     $('div.zx_left').block({ 
-                message: '<div>'+resultString1+'</div>', 
+                message: '<textarea>'+resultString1+'</textarea>', 
                 css: { border: '3px solid #a00' } 
             }); 
 
