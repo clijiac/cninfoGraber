@@ -3,6 +3,8 @@
 // @namespace   cninfoGraber
 // @description grab cninfo company financial report
 // @grant       none
+// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js
+// @require     http://bainternet-js-cdn.googlecode.com/svn/trunk/js/jQuery%20BlockUI%20Plugin/2.39/jquery.blockUI.js
 // @include     http://www.cninfo.com.cn/information/*
 // @version     1
 // ==/UserScript==
@@ -69,7 +71,34 @@ function getdata()
 		};
 	}
 	var resultString1=resultString.substr(0, resultString.length-1);  
-	alert(resultString1);
+	 $.blockUI({ 
+            theme:     false, 
+            showOverlay: false,
+            draggable: true,     
+           	css: { 
+	            border: 'none', 
+	            top:  ($(window).height() - 600) /2 + 'px', 
+                left: ($(window).width() - 800) /2 + 'px', 
+                width: '700px' ,
+	            padding: '15px', 
+	            backgroundColor: '#000', 
+	            '-webkit-border-radius': '10px', 
+	            '-moz-border-radius': '10px', 
+	            opacity: .8, 
+	            color: '#fff' 
+        	},
+            title:    '10秒之内复制', 
+            message:  '<textarea rows="1" style="width: 700px;height = 20px" >'+resultString1+'</textarea>', 
+            timeout:   10000 
+        }); 
+
+    	$('textarea').click(function(){
+			if($.browser.msie) this.createTextRange().select();
+			else {
+				this.selectionStart = 0;
+				this.selectionEnd = this.value.length;
+			}
+		})
 	return false;
  }
 
